@@ -1,0 +1,35 @@
+{
+    "name": "lordjohn42/megafon-virtual-ats",
+    "description": "REST API virtual ats integration.",
+    "type": "library",
+    "minimum-stability": "dev",
+    "version": "1.0",
+    "require": {
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eugene L",
+            "email": "eugene.li.eu@gmail.com"
+        },
+        {
+            "name": "Vitaly Mochalov",
+            "email": "vmochalov@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MegafonVirtualAts\\": "src/"
+        }
+    },
+    "repositories": {
+        "dev-package": {
+            "type": "path",
+            "url": "/home/eugene/PhpstormProjects/crm/crm/packages/lordjohn42-megafon-virtual-ats-service",
+            "options": {
+                "symlink": true
+            }
+        }
+    }
+}
