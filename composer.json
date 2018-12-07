@@ -22,14 +22,5 @@
         "psr-4": {
             "MegafonVirtualAts\\": "src/"
         }
-    },
-    "repositories": {
-        "dev-package": {
-            "type": "path",
-            "url": "/home/eugene/PhpstormProjects/crm/crm/packages/lordjohn42-megafon-virtual-ats-service",
-            "options": {
-                "symlink": true
-            }
-        }
     }
 }

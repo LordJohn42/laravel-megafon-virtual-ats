@@ -5,6 +5,7 @@ namespace MegafonVirtualAts\Controllers;
 use Illuminate\Http\Request;
 use MegafonVirtualAts\Events\AtsCrmEvent;
 use Event;
+use Log;
 
 class MegafonController extends \App\Http\Controllers\Controller implements \MegafonVirtualAts\Contracts\IAtsToCrm
 {
@@ -13,26 +14,10 @@ class MegafonController extends \App\Http\Controllers\Controller implements \Meg
      * @param Request $request
      * @return mixed
      */
-    public function history(Request $request)
+    public function index(Request $request)
     {
+        // TODO: event type
         Event::fire(new AtsCrmEvent($request, 'history'));
-    }
-
-    /**
-     * @param Request $request
-     * @return mixed
-     */
-    public function event(Request $request)
-    {
-        Event::fire(new AtsCrmEvent($request, 'event'));
-    }
-
-    /**
-     * @param Request $request
-     * @return mixed
-     */
-    public function contact(Request $request)
-    {
-        Event::fire(new AtsCrmEvent($request, 'contact'));
+        Log::debug('Request from megafon', ['request' => $request]);
     }
 }
