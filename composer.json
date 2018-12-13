@@ -22,5 +22,14 @@
         "psr-4": {
             "MegafonVirtualAts\\": "src/"
         }
+    },
+    "repositories": {
+        "dev-package": {
+            "type": "path",
+            "url": "../lordjohn42-megafon-virtual-ats",
+            "options": {
+                "symlink": true
+            }
+        }
     }
 }

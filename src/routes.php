@@ -1,4 +1,4 @@
 <?php
-Route::post('megafon/entry_point', ['as' => 'megafon.entry_point',
+Route::post('/api/megafon/index', ['as' => 'megafon.index',
     'uses' => 'MegafonVirtualAts\Controllers\MegafonController@index'
 ]);

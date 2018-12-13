@@ -38,7 +38,13 @@ class MegafonVirtualAts
     protected $token;
 
 
-
+    /**
+     *
+     * MegafonVirtualAts constructor.
+     * @param $config
+     * @throws TokenExpectedException
+     * @throws URIExcectedException
+     */
     public function __construct($config)
     {
         // Если есть в конфиге, берем оттуда, если нету, читаем из конфига
@@ -70,7 +76,7 @@ class MegafonVirtualAts
     public function __call($name, $arguments)
     {
         // Делаем массив доступных методов и выпиливаем методы начинающиеся на __
-        $availableMethods = collect(explode(',',implode(',',get_class_methods(CrmToAts::class)).','.implode(',',get_class_methods(AtsToCrm::class))))->filter(function($item){
+        $availableMethods = collect(explode(',',implode(',',get_class_methods(CrmToAts::class)).','))->filter(function($item){
             if(!$item) {return false;}
             if(strpos($item,'__')!==false) {return false;}
             return true;
