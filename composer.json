@@ -3,7 +3,7 @@
     "description": "REST API virtual ats integration.",
     "type": "library",
     "minimum-stability": "dev",
-    "version": "1.1",
+    "version": "1.1.0",
     "require": {
         "guzzlehttp/guzzle": "~6.0"
     },
