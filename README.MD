@@ -15,4 +15,7 @@ Megafon REST API (совсем не REST) для виртуальной АТС. 
 
 Использование
 
-`$res = new `
+`
+use MegafonVirtualAts;
+$api_call = new MegafonVirtualAts('token');
+`
